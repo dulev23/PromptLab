@@ -1,0 +1,88 @@
+.ws-filter-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.ws-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.visibility-toggle {
+  display: flex;
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.vis-btn {
+  flex: 1;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  border-right: 1px solid var(--border-bright);
+  transition: all 0.15s;
+  font-family: var(--font-display);
+  cursor: pointer;
+  border-top: none;
+  border-bottom: none;
+}
+
+.vis-btn:last-child { border-right: none; }
+
+.vis-btn.active {
+  color: var(--accent);
+  background: var(--accent-glow);
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  justify-content: flex-end;
+}
+
+.card-action-btn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  transition: all 0.15s;
+  font-family: var(--font-display);
+  cursor: pointer;
+  background: none;
+}
+
+.card-action-btn.edit {
+  color: var(--blue);
+  background: var(--blue-dim);
+  border-color: var(--blue-dim);
+}
+
+.card-action-btn.edit:hover { background: #1a3a6e; }
+
+.card-action-btn.delete {
+  color: var(--red);
+  background: var(--red-dim);
+  border-color: var(--red-dim);
+}
+
+.card-action-btn.delete:hover { background: #5a1e1e; }
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px;
+  color: var(--text-muted);
+  font-size: 15px;
+}

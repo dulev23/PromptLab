@@ -1,0 +1,130 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.home-hero {
+  margin-bottom: 40px;
+}
+
+.hero-badge {
+  font-size: 11px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin-bottom: 12px;
+  letter-spacing: -0.025em;
+}
+
+.hero-accent { color: var(--accent); }
+
+.hero-sub {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  max-width: 460px;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.stat-card:hover { border-color: var(--border-bright); }
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.stat-card-skeleton { height: 90px; }
+
+.home-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-tab {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  cursor: pointer;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-family: var(--font-display);
+}
+
+.home-tab:hover { color: var(--text-primary); }
+
+.home-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.prompts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.empty-state a { color: var(--accent); font-weight: 600; }
+
+@media (max-width: 600px) {
+  .stats-row   { grid-template-columns: 1fr; }
+  .prompts-grid { grid-template-columns: 1fr; }
+}
